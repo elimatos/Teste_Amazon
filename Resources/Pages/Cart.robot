@@ -1,22 +1,19 @@
 *** Settings ***
-Library     SeleniumLibrary
-Resource    ../Keys/Cart_keys.robot
+Documentation       Aqui constam todas as ações da tela do carrinho
+Resource                ../Keys/Cart_keys.robot
 
 *** Keywords ***
 Conferir o produto no carrinho
-    Title Should Be                ${CART_TITLE}
-    Page Should Contain Element    ${NAME_PRODUCT}
-    Page Should Contain Element    ${QUANTIDADE}
+    Title Should Be                     ${CART_TITLE}
+    Page Should Contain Element         ${NAME_PRODUCT}
+    Page Should Contain Element         ${QUANTIDADE}
 
-Conferir o produto no novo carrinho
-    Title Should Be                ${CART_TITLE}
-    Page Should Contain Element    ${NAME_PRODUCT}
-    Page Should Contain Element    ${QUANTIDADE_3}
+Conferir nova quantidade no carrinho
+    Title Should Be                     ${CART_TITLE}
+    Page Should Contain Element         ${NAME_PRODUCT}
+    Page Should Contain Element         ${QUANTIDADE_2}
 
-Retornar a pagina anterior
-    Go Back
-    Go back
-
-
+Conferir o valor do frete
+    Page Should Contain Element         ${FRETE}
 
 
