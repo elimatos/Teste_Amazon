@@ -1,11 +1,11 @@
 *** Settings ***
-Documentation       Aqui constam todas os casos de teste
-Resource            ../Resources/Pages/Home.robot
-Resource            ../Resources/Pages/Cart.robot
-Resource            ../Resources/Pages/List.robot
-Resource            ../Resources/Pages/Product.robot
-Suite Setup         Abrir navegador
-Suite Teardown      Fechar navegador
+Documentation     Aqui constam todas os casos de teste
+Resource          ../Resources/Pages/Home.robot
+Resource          ../Resources/Pages/Cart.robot
+Resource          ../Resources/Pages/List.robot
+Resource          ../Resources/Pages/Product.robot
+Suite Setup       Abrir navegador
+Suite Teardown    Fechar navegador
 
 *** Test Case ***
 Pesquisar produto
@@ -23,7 +23,7 @@ Consultar o CEP do VIACEP
     E consultar o frete e prazo de entrega
     Inserindo um CEP valido
 
-  
+
 Adicionar o produto ao carrinho
     E adicionar o produto ao carrinho
     Então o produto deve constar no carrinho
@@ -49,7 +49,7 @@ Então o produto "${PRODUTO}" deve ser listado na página de resultado da busca
     Conferir se o produto "${PRODUTO}" foi listado no site
 
 Dado que estou na página de listagem de produtos
-    Conferir nome do departamento  
+    Conferir nome do departamento    
 
 Quando eu selecionar o produto
     Selecionar o produto desejado
